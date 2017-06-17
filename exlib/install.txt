@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=spring-data-elasticsearch-2.2.0.pre5.x.jar -DgroupId=org.springframework.data -DartifactId=spring-data-elasticsearch -Dversion=2.2.0.pre5.x -Dpackaging=jar

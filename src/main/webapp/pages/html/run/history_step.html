@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETL管理工具-任务详情</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link href="../../codebase/dhtmlxgrid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/component.css" />
+</head>
+<body>
+    <h3 class="m-crumb">当前位置：任务运行 <i></i> 任务详情 <i></i> 步骤信息</h3>
+    <div class="product_box">
+        <div class="vice_nav clearfix">
+            <a class="vice_name" hrefurl ="history_chart">任务图形</a>
+            <a class="vice_name active" hrefurl ="history_step">步骤信息</a>
+            <a class="vice_name" hrefurl ="history_log">任务日志</a>
+        </div>
+        <div id="gridbox" class="grid_table mbottom_20" style="width:100%;"></div>
+        <div class="m-button m-button-submit" onclick="javascript: history.back();" id="close_win">返 回</div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../codebase/dhtmlx.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/inner/history_step.js"></script>
+</body>
+</html>

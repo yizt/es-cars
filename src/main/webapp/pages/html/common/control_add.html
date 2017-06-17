@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETL管理工具-添加调度</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/dialog.css" />
+</head>
+<body class="dialog_body big_pop_body">
+    <div class="vice_nav clearfix">
+        <a class="vice_name active" showid="tabone">基本信息</a>
+        <a class="vice_name" showid="tabtwo">任意参数</a>
+    </div>
+    <div class="pop_group">
+        <div class="pop_tab" id="tabone" style="display:block;">
+            <div class="pop_row clearfix">
+                <div class="pop_tit">任务类型：</div>
+                <div class="pop_ind">
+                    <select id="type" class="w250">
+                        <option>importDataByDay</option>
+                        <option>importDataByDay2</option>
+                    </select>
+                    <strong><font style="color:red">&lowast;</font></strong>
+                </div>
+                <i class="hide info_w23"></i>
+            </div>
+            <div class="pop_row clearfix">
+                <div class="pop_tit">任务版本：</div>
+                <div class="pop_ind">
+                    <select id="version" class="w250">
+                        <option>v 0.1</option>
+                        <option>v 0.2</option>
+                    </select>
+                    <strong><font style="color:red">&lowast;</font></strong>
+                </div>
+                <i class="hide info_w23"></i>
+            </div>
+            <div class="pop_row clearfix">
+                <div class="pop_tit">任务调度名称：</div>
+                <div class="pop_ind">
+                    <input id="name" class="w250" type="text" />
+                    <strong><font style="color:red">&lowast;</font></strong>
+                </div>
+                <i class="hide info_w23"></i>
+            </div>
+            <div class="pop_row clearfix">
+                <div class="pop_tit">开始时间：</div>
+                <div class="pop_ind">
+                    <input id="starttime" class="w250" type="text" />
+                    <strong><font style="color:red">&lowast;</font></strong>
+                </div>
+                <i class="hide info_w23"></i>
+            </div>
+            <div class="pop_row clearfix">
+                <div class="pop_tit">执行间隔：</div>
+                <div class="pop_ind">
+                    <input type="text" id="interval" class="w160" />
+                    <select id="interval_title">
+                        <option>天</option>
+                        <option>周</option>
+                        <option>小时</option>
+                        <option>分钟</option>
+                    </select>
+                    <strong><font style="color:red">&lowast;</font></strong>
+                </div>
+                <i class="hide info_w23"></i>
+            </div>
+        </div>
+        <div class="pop_tab" id="tabtwo">
+            <div class="pop_row" id="param_box">
+                <div class="pop_add">
+                    <span>参数名：</span>
+                    <input type="text" class="w120 paramName" />
+                    <span>参数值：</span>
+                    <input type="text" class="w120 paramValue"/>
+                    <a onclick="addData()" class="add">新增</a>
+                </div>
+            </div>
+        </div>
+        <div class="pop_row pop_btn mtop_20">
+            <a class="btn_sure">确定</a>
+            <a class="btn_cancel">取消</a>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/dialog/control_add.js"></script>
+</body>
+</html>

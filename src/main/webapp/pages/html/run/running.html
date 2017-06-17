@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETL管理工具-任务运行</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link href="../../codebase/dhtmlxgrid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/component.css" />
+</head>
+<body>
+    <h3 class="m-crumb">当前位置：任务运行 <i></i> 运行中任务</h3>
+    <div class="product_box">
+        <form>
+            <div class="steel_date">
+                <span class="steel_text">任务名称：</span>
+                <input class="form_input" id="taskName" type="text" />
+                <span class="steel_text">创建人：</span>
+                <input class="form_input" id="taskUser" type="text" />
+                <span class="steel_text">任务类型：</span>
+                <select class="form_input" id="taskType">
+                    <option id="作业">作业</option>
+                    <option id="转换">转换</option>
+                </select>
+                <span class="m-button m-button-submit" id="btn_search">查 询</span>
+                <button type="reset" class="m-button m-button-query">重置</button>
+            </div>
+        </form>
+        <div id="gridbox" style="width:100%;"></div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../codebase/dhtmlx.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/inner/running.js"></script>
+</body>
+</html>

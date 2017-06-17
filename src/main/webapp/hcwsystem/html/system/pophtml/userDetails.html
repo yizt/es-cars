@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HCWCloud医疗大数据平台-系统管理</title>
+  <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../css/component.css"/>
+  <link rel="stylesheet" href="../../../css/main.css">
+
+</head>
+<body>
+<div class="pop-form">
+  <ul class="list-unstyled">
+    <li class="clearfix"><span class="pull-left text-label">用户姓名：</span>
+      <div class="pull-left"><input class="form-control" id="name" type="text"/></div>
+    </li>
+    <li class="clearfix"><span class="pull-left text-label">邮箱地址：</span>
+      <div class="pull-left"><input class="form-control" id="email" type="text"/></div>
+    </li>
+    <li class="clearfix"><span class="pull-left text-label">所属组织：</span>
+      <div class="pull-left"><select id="group" class="form-control"></select></div>
+    </li>
+    <li class="clearfix"><span class="pull-left text-label">用户角色：</span>
+      <div class="pull-left" id="roles"></div>
+    </li>
+    <li class="clearfix"><span class="pull-left text-label">用户状态：</span>
+      <div class="pull-left">
+        <select id="available" class="form-control">
+          <option value="1">启用</option>
+          <option value="3">禁用</option>
+        </select>
+      </div>
+    </li>
+  </ul>
+  <div class="btn-operates">
+    <a id="btn_save" class="btn btn-save">保存</a>
+    <a id="btn_cancel" class="btn btn-cancel">取消</a>
+  </div>
+</div>
+<script src="../../../js/jquery.min.js"></script>
+<script src="../../../js/bootstrap.min.js"></script>
+<script src="../../../js/config.js"></script>
+<script src="../../../js/common.js"></script>
+<script src="../../../js/system/user_details.js"></script>
+</body>
+</html>

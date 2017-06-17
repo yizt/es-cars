@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HCWCloud医疗大数据平台-系统管理</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/component.css"/>
+    <link rel="stylesheet" href="../../css/main.css">
+
+</head>
+<body class="clearfix">
+<h3 class="m-crumb">当前位置：系统管理 <i></i> 组织管理</h3>
+<div class="table-box">
+    <div class="operate-box">
+        <span>组织名：</span>
+        <input id="groupname" class="form-control" type="text"/>
+        <span>组织状态：</span>
+        <select id="available" class="form-control">
+            <option value="">全部</option>
+            <option value="1">启用</option>
+            <option value="3">禁用</option>
+        </select>
+        <a id="btn-query" class="btn btn-query">查询</a>
+    </div>
+    <div class="operate-box margin-bottom-15">
+        <a class="btn btn-add">新增</a>
+        <a class="btn btn-dels">删除</a>
+    </div>
+    <table id="table_groupslist" class="table table-bordered">
+        <tr class="table-header">
+            <th><input id="check_all" type="checkbox"/></th>
+            <th>组织名称</th>
+            <th>上级组织</th>
+            <th>组织描述</th>
+            <th>用户状态</th>
+            <th>操作</th>
+        </tr>
+        <tr class="table-content">
+            <td><input class="btn-check" type="checkbox"/></td>
+            <td class="data-name">皮肤科</td>
+            <td class="data-upgroup">湘雅</td>
+            <td class="data-des">皮肤相关治疗</td>
+            <td class="data-available">禁用</td>
+            <td><a class="btn-details">详情编辑</a><a class="btn-del">删除</a></td>
+        </tr>
+        <tr class="table-content">
+            <td><input class="btn-check" type="checkbox"/></td>
+            <td class="data-name">外科</td>
+            <td class="data-upgroup">湘雅</td>
+            <td class="data-des">外科相关治疗</td>
+            <td class="data-available">禁用</td>
+            <td><a class="btn-details">详情编辑</a><a class="btn-del">删除</a></td>
+        </tr>
+        <tr class="table-content">
+            <td><input class="btn-check" type="checkbox"/></td>
+            <td class="data-name">妇科</td>
+            <td class="data-upgroup">湘雅</td>
+            <td class="data-des">妇科相关治疗</td>
+            <td class="data-available">启用</td>
+            <td><a class="btn-details">详情编辑</a><a class="btn-del">删除</a></td>
+        </tr>
+        <tr class="table-content">
+            <td><input class="btn-check" type="checkbox"/></td>
+            <td class="data-name">内科</td>
+            <td class="data-upgroup">湘雅</td>
+            <td class="data-des">内科相关治疗</td>
+            <td class="data-available">启用</td>
+            <td><a class="btn-details">详情编辑</a><a class="btn-del">删除</a></td>
+        </tr>
+    </table>
+    <div class="m-pagenav clearfix">
+        <div class="sum pull-left">共<span>100</span>条记录，每页展示<select>
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+        </select>条
+        </div>
+        <div class="m-pagination pull-right">
+            <ul>
+                <li pagenum="1" class="first disabled"><a>首页</a></li>
+                <li class="prev disabled" pagenum="0"><a>&lt;</a></li>
+                <li class="creatli active" pagenum="1"><a>1</a></li>
+                <li class="creatli" pagenum="2"><a>2</a></li>
+                <li class="creatli" pagenum="3"><a>3</a></li>
+                <li class="creatli" pagenum="4"><a>4</a></li>
+                <li class="creatli" pagenum="5"><a>5</a></li>
+                <li class="next" pagenum="2"><a>&gt;</a></li>
+                <li class="last" pagenum="10"><a>尾页</a></li>
+            </ul>
+            <div class="inputbox">
+                <input type="text" value="1" onkeyup="value=value.replace(/[^\d]/g,'')"
+                       onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))">页<a>确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/config.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/system/system_group.js"></script>
+</body>
+</html>

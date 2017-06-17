@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-color: #eee;
+            min-heigth: 100%;
+            padding-top: 100px;
+        }
+
+        #test {
+            width: 650px;
+            height: 400px;
+            box-shadow: 0 0 5px 3px #ddd;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div id="test"></div>
+<script src="jquery.min.js"></script>
+<script src="echarts.min.js"></script>
+<script>
+    $(function () {
+        var mychart = echarts.init(document.getElementById('test'));
+        mychart.setOption({
+            color: ['#578cca'],
+            backgroundColor: '#fff',
+            title: {
+                text: '2014年各月份出院人次统计',
+                left: 'center',
+                bottom: '8',
+                textStyle: {
+                    fontWeight: 'normal',
+                    fontSize: 12,
+                    color: '#000'
+                }
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '10%',
+                top: '7%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: [],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            },
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '出院人次',
+                    type: 'bar',
+                    data: []
+                }
+            ]
+        });
+        $.ajax({
+            url: '/es-med/rest/medicalInEx/outpIncome',
+            type: 'POST',
+            data: JSON.stringify({
+                "year":"2017",
+                "month":"03"
+            }),
+            dataType: 'json',
+            success: function (res) {
+                if (res.status) {
+                    mychart.setOption({
+                        xAxis: {
+                            data: res.data.xaxis
+                        },
+                        series: [
+                            {
+                                name: '出院人次',
+                                type: 'bar',
+                                data: res.data.yaxis,
+                                barWidth: '30'
+                            }
+                        ]
+                    });
+                } else {
+                    alert(res.messages);
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

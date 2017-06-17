@@ -1,0 +1,252 @@
+﻿/**
+**弹出对话框样式   
+*/
+.dialog_body {
+	position:relative;
+	left:-5px;
+}
+.dialog_body .pop_btn {
+	text-align:center;
+}
+.dialog_body .pop_btn a {
+	border-radius:5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	cursor:pointer;
+	min-width:100px;
+	font-size:16px;
+	display:inline-block;
+	padding:6px 10px;
+	color:#fff;    
+	margin:0px 10px;
+}
+.dialog_body .pop_btn .btn_sure {
+	background-color:#1E79B1;
+}
+.dialog_body .pop_btn .btn_cancel {
+	background: #DCDBDB;
+    color: #000;
+}
+
+/*警告*/
+.warn_body {
+	padding-top:80px;
+	background:url(../imgs/warn.png) no-repeat center 20px;
+}
+.warn_body p {
+	margin-top:5px;
+	font-size:14px;
+	text-align:center;
+    min-height:40px;
+    line-height:18px;
+}
+
+/*删除*/
+.delete_body {
+	padding-top:80px;
+	background:url(../imgs/warn.png) no-repeat center 20px;
+}
+.delete_body h3 {
+	font-size:14px;
+	text-align:center;
+}
+.delete_body p {
+	margin-top:5px;
+	font-size:12px;
+	text-align:center;
+	color:#999;
+    min-height:40px;
+}
+
+/*会员编辑*/
+.dialog_body .pop_group {
+	padding:30px 40px;
+}
+.pop_group .pop_row {
+	position:relative;
+	padding-bottom:20px;
+	font-size:14px;
+}
+.pop_row .pop_tit {
+	float:left;
+	width:23%;
+	text-align:right;
+	line-height:33px;
+	font-size:14px;
+}
+.pop_row .pop_ind {
+	float:right;
+	width:74%;
+	position:relative;
+}
+.pop_ind strong {
+	font-weight:normal;
+	color:#999999;
+}
+.pop_row .pop_info {
+	position:absolute;
+	color:red;
+	font-style:normal;
+	font-size:12px;
+	bottom:-18px;
+	left:0;
+}
+.pop_ind div:not(:last-of-type) {
+	margin-bottom:10px;
+}
+.pop_ind .notinput {
+	background:#fff;
+	border:none;
+	box-shadow:none;
+	color:#077eed;
+	font-size:15px;
+}
+.pop_ind select {
+	height:33px;
+	border:1px solid #ccc;
+	box-shadow:0 1px 1px rgba(0,0,0,0.075) inset;
+}
+.pop_row .w250 {
+	width:250px;
+}
+.pop_row .w160 {
+	width:160px;
+}
+.pop_row .w120 {
+	width:120px;
+}
+.pop_row input.input_disable {
+	background-color:#fff;
+	border:none;
+	box-shadow:none;
+}
+.pop_row .pop_ind.float-left {
+	float:left;
+}
+.pop_row i.hide{
+    display:none;
+}
+.pop_row.remark_info {
+	color:#666;
+	padding:0px 8%;
+}
+.dialog_body .remark_info p {
+	line-height:1.6;
+}
+/*适应标题字较长*/
+.pop_row .tit_w19 {
+	width:19%;
+}
+.pop_row .ind_w80 {
+	width:80%;
+}
+.pop_row .info_w19 {
+	position:absolute;
+	color:red;
+	font-style:normal;
+	font-size:12px;
+	bottom:3px;
+	left:20%;
+}
+.pop_row .info_w23 {
+	position:absolute;
+	color:red;
+	font-style:normal;
+	font-size:12px;
+	bottom:3px;
+	left:26%;
+}
+.pop_row input.input_disable{
+	background:#fff;
+	border:none;
+	box-shadow:none;
+}
+/*tab切换*/
+.pop_group .pop_tab {
+    display:none;
+    min-height:270px;
+}
+.vice_nav {
+    height: 40px;
+    line-height: 30px;
+    color: #222;
+    font-size: 14px;
+    padding-top:10px;
+    overflow:hidden;
+}
+.vice_nav .vice_name {
+    float: left;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    color: #666;
+    position:relative;
+}
+.vice_nav .vice_name:not(:last-child):after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:6px;
+    width:1px;
+    height:18px;
+    background-color:#e5e5e5;
+}
+.vice_nav .vice_name.active {
+    color: #077eed;
+}
+.pop_row .pop_add {
+    margin-bottom:10px;
+}
+.pop_add span{
+    display:inline-block;
+    width:80px;
+    line-height: 33px;
+    text-align:right;
+}
+.pop_add .add {
+    font-size: 15px;
+    color: #fff;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #008000;
+    padding: 6px 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    cursor: pointer;
+}
+.pop_add .remove { 
+    font-size: 16px; 
+    color: #000; 
+    background-color: #e9e9e9; 
+    display: inline-block; 
+    width: 20px; height: 20px; 
+    text-align: center; 
+    line-height: 20px; 
+    font-style: normal; 
+    border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    cursor: pointer; 
+    margin-left: 23px; 
+    box-shadow: 0 1px 3px #ddd; 
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+.pop_add .remove:hover { 
+    background-color: #E53935; 
+    color: #fff; 
+}
+/*配置*/
+.pop_btn.mtop_20 {
+	margin-top:20px;
+}
+.border_bottom {
+    border-bottom:1px solid #e5e5e5;
+}
+
+

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HCWCloud医疗大数据平台-医疗质量分析</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../../css/component.css" />
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="clearfix">
+    <h3 class="m-crumb">当前位置：医疗质量 <i></i> 概述</h3>
+    <div class="m-chart-box">
+        <div class="steel_date">
+            <input id="year_01_03" readonly="" class="form_input year_date" type="text"/>
+            <span class="steel_text">年</span>
+            <span class="steel_text">- 科室：</span>
+            <select id="department_01_03" class="form_input long">
+                <option value="">全部</option>
+                <option value="中医科">中医科</option>
+                <option value="中医科病区">中医科病区</option>
+                <option value="儿科">儿科</option>
+                <option value="儿科二病区">儿科二病区</option>
+                <option value="十四病室一病区">十四病室一病区</option>
+                <option value="十四病室七病区">十四病室七病区</option>
+                <option value="十四病室三病区">十四病室三病区</option>
+                <option value="十四病室二病区">十四病室二病区</option>
+                <option value="十四病室六病区">十四病室六病区</option>
+                <option value="十四病室四病区">十四病室四病区</option>
+                <option value="呼吸内科">呼吸内科</option>
+                <option value="呼吸内科一病区">呼吸内科一病区</option>
+                <option value="妇科">妇科</option>
+                <option value="妇科一病区">妇科一病区</option>
+                <option value="家庭病房科">家庭病房科</option>
+                <option value="康复科">康复科</option>
+                <option value="康复科一病区">康复科一病区</option>
+                <option value="康复科四病区">康复科四病区</option>
+                <option value="心胸外科四病区">心胸外科四病区</option>
+                <option value="心血管内科">心血管内科</option>
+                <option value="心血管外科">心血管外科</option>
+                <option value="急诊科">急诊科</option>
+                <option value="放射科">放射科</option>
+                <option value="普外科三病区">普外科三病区</option>
+                <option value="普外科五病区">普外科五病区</option>
+                <option value="普外科四病区">普外科四病区</option>
+                <option value="普通外科">普通外科</option>
+                <option value="核医学科">核医学科</option>
+                <option value="泌尿外科">泌尿外科</option>
+                <option value="消化内科">消化内科</option>
+                <option value="神经内科">神经内科</option>
+                <option value="神经外科">神经外科</option>
+                <option value="皮肤科">皮肤科</option>
+            </select>
+            <span id="querybtn_01_03" class="m-button m-button-query">查 询</span>
+        </div>
+        <div id="chart_01_03" class="chart">
+        </div>
+    </div>
+    <div class="m-chart-box">
+        <div class="steel_date">
+            <input id="year_01_02" readonly="" class="form_input year_date" type="text"/>
+            <span class="steel_text">年</span>
+            <input id="month_01_02" readonly="" class="form_input month_date short"
+                   type="text"/>
+            <span class="steel_text">月</span>
+            <span class="steel_text">- 科室：</span>
+            <select id="department_01_02" class="form_input long">
+                <option value="">全部</option>
+                <option value="中医科">中医科</option>
+                <option value="中医科病区">中医科病区</option>
+                <option value="儿科">儿科</option>
+                <option value="儿科二病区">儿科二病区</option>
+                <option value="十四病室一病区">十四病室一病区</option>
+                <option value="十四病室七病区">十四病室七病区</option>
+                <option value="十四病室三病区">十四病室三病区</option>
+                <option value="十四病室二病区">十四病室二病区</option>
+                <option value="十四病室六病区">十四病室六病区</option>
+                <option value="十四病室四病区">十四病室四病区</option>
+                <option value="呼吸内科">呼吸内科</option>
+                <option value="呼吸内科一病区">呼吸内科一病区</option>
+                <option value="妇科">妇科</option>
+                <option value="妇科一病区">妇科一病区</option>
+                <option value="家庭病房科">家庭病房科</option>
+                <option value="康复科">康复科</option>
+                <option value="康复科一病区">康复科一病区</option>
+                <option value="康复科四病区">康复科四病区</option>
+                <option value="心胸外科四病区">心胸外科四病区</option>
+                <option value="心血管内科">心血管内科</option>
+                <option value="心血管外科">心血管外科</option>
+                <option value="急诊科">急诊科</option>
+                <option value="放射科">放射科</option>
+                <option value="普外科三病区">普外科三病区</option>
+                <option value="普外科五病区">普外科五病区</option>
+                <option value="普外科四病区">普外科四病区</option>
+                <option value="普通外科">普通外科</option>
+                <option value="核医学科">核医学科</option>
+                <option value="泌尿外科">泌尿外科</option>
+                <option value="消化内科">消化内科</option>
+                <option value="神经内科">神经内科</option>
+                <option value="神经外科">神经外科</option>
+                <option value="皮肤科">皮肤科</option>
+            </select>
+            <span id="querybtn_01_02" class="m-button m-button-query">查 询</span>
+        </div>
+        <div id="chart_01_02" class="chart">
+        </div>
+    </div>
+    <div class="m-chart-box">
+        <div class="steel_date">
+            <input id="year_01_01" readonly="" class="form_input year_date" type="text"/>
+            <span class="steel_text">年</span>
+            <input id="month_01_01" readonly="" class="form_input month_date short"
+                   type="text"/>
+            <span class="steel_text">月</span>
+            <input id="day_01_01" readonly="" class="form_input day_date short" type="text"/>
+            <span class="steel_text">日</span>
+            <span class="steel_text">- 科室：</span>
+            <select id="department_01_01" class="form_input long">
+                <option value="">全部</option>
+                <option value="中医科">中医科</option>
+                <option value="中医科病区">中医科病区</option>
+                <option value="儿科">儿科</option>
+                <option value="儿科二病区">儿科二病区</option>
+                <option value="十四病室一病区">十四病室一病区</option>
+                <option value="十四病室七病区">十四病室七病区</option>
+                <option value="十四病室三病区">十四病室三病区</option>
+                <option value="十四病室二病区">十四病室二病区</option>
+                <option value="十四病室六病区">十四病室六病区</option>
+                <option value="十四病室四病区">十四病室四病区</option>
+                <option value="呼吸内科">呼吸内科</option>
+                <option value="呼吸内科一病区">呼吸内科一病区</option>
+                <option value="妇科">妇科</option>
+                <option value="妇科一病区">妇科一病区</option>
+                <option value="家庭病房科">家庭病房科</option>
+                <option value="康复科">康复科</option>
+                <option value="康复科一病区">康复科一病区</option>
+                <option value="康复科四病区">康复科四病区</option>
+                <option value="心胸外科四病区">心胸外科四病区</option>
+                <option value="心血管内科">心血管内科</option>
+                <option value="心血管外科">心血管外科</option>
+                <option value="急诊科">急诊科</option>
+                <option value="放射科">放射科</option>
+                <option value="普外科三病区">普外科三病区</option>
+                <option value="普外科五病区">普外科五病区</option>
+                <option value="普外科四病区">普外科四病区</option>
+                <option value="普通外科">普通外科</option>
+                <option value="核医学科">核医学科</option>
+                <option value="泌尿外科">泌尿外科</option>
+                <option value="消化内科">消化内科</option>
+                <option value="神经内科">神经内科</option>
+                <option value="神经外科">神经外科</option>
+                <option value="皮肤科">皮肤科</option>
+            </select>
+            <span id="querybtn_01_01" class="m-button m-button-query">查 询</span>
+        </div>
+        <div id="chart_01_01" class="chart">
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/echarts.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-datetimepicker.js"></script>
+    <script src="../../js/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/inner/quality_charts.js"></script>
+</body>
+</html>

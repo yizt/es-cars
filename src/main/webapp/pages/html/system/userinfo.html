@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETL管理工具-系统管理</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/component.css" />
+</head>
+<body>
+    <h3 class="m-crumb">当前位置：系统管理 <i></i> 个人信息</h3>
+    <div class="product_box">
+        <form>
+            <ul class="grid_form">
+                <li class="clearfix">
+                    <span>用户名:</span>
+                    <div class="input_disable" id="username"></div>
+                </li>
+                <li class="clearfix">
+                    <span>密码:</span>
+                    <input id="password" type="password" />
+                    <div class="form_tip"><em></em>密码为空表示不修改密码</div>
+                </li>
+                <li class="clearfix">
+                    <span>确认密码:</span>
+                    <input id="repassword" type="password" />
+                    <div class="form_tip"><em></em>确认密码必须与密码一致</div>
+                    <i class="hide"></i>
+                </li>
+                <li class="clearfix">
+                    <span>姓名:</span>
+                    <input id="name" type="text" placeholder="请输入姓名" />
+                    <div class="form_tip"><em>*</em>至少两个汉字</div>
+                    <i class="hide"></i>
+                </li>
+                <li class="clearfix">
+                    <span>手机号码:</span>
+                    <input id="tel" type="text" maxlength="11" placeholder="请输入手机号" />
+                    <div class="form_tip"><em>*</em>只能为11位数字</div>
+                    <i class="hide"></i>
+                </li>
+            </ul>
+            <div class="form_button">
+                <span id="submit_btn" class="m-button m-button-submit mright_20">提交</span>
+                <input type="reset" class="m-button m-button-query" value="重置" />
+            </div>
+        </form>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/inner/userinfo.js"></script>
+</body>
+</html>

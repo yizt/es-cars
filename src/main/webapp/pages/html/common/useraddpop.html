@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETL管理工具-添加用户</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/dialog.css" />
+</head>
+<body class="dialog_body">
+    <div class="pop_group">
+        <div class="pop_row clearfix">
+            <div class="pop_tit tit_w19">用户名：</div>
+            <div class="pop_ind ind_w80">
+                <input id="username" class="w250" type="text" />
+                <strong><font style="color:red">&lowast;</font> 保证唯一性</strong>
+            </div>
+            <i class="hide info_w19"></i>
+        </div>
+        <div class="pop_row clearfix">
+            <div class="pop_tit tit_w19">密码：</div>
+            <div class="pop_ind ind_w80">
+                <input id="password" class="w250" type="password" />
+                <strong><font style="color:red">&lowast;</font> 密码为空表示不修改密码</strong>
+            </div>
+            <i class="hide info_w19"></i>
+        </div>
+        <div class="pop_row clearfix">
+            <div class="pop_tit tit_w19">确认密码：</div>
+            <div class="pop_ind ind_w80">
+                <input id="repassword" class="w250" type="password" />
+                <strong><font style="color:red">&lowast;</font> 确认密码必须与密码一致</strong>
+            </div>
+            <i class="hide info_w19"></i>
+        </div>
+        <div class="pop_row clearfix">
+            <div class="pop_tit tit_w19">姓名：</div>
+            <div class="pop_ind ind_w80">
+                <input id="name" class="w250" type="text" />
+                <strong><font style="color:red">&lowast;</font> 至少两个汉字</strong>
+            </div>
+            <i class="hide info_w19"></i>
+        </div>
+        <div class="pop_row clearfix">
+            <div class="pop_tit tit_w19">手机号码：</div>
+            <div class="pop_ind ind_w80">
+                <input type="tel" id="tel" class="w250" />
+                <strong><font style="color:red">&lowast;</font> 只能为11位数字</strong>
+            </div>
+            <i class="hide info_w19"></i>
+        </div>
+        <div class="pop_row clearfix">
+            <div class="pop_tit tit_w19">角色：</div>
+            <div class="pop_ind ind_w80">
+                <select id="role" class="w250"><option value="Administrator">管理员</option><option value="User">普通用户</option></select>
+                <strong><font style="color:red">&lowast;</font></strong>
+            </div>
+        </div>
+        <div class="pop_row remark_info">
+            <p><font style="color:red">&lowast;</font> 备注：普通用户无权使用【用户管理】功能</p>
+        </div>
+        <div class="pop_row pop_btn mtop_20">
+            <a class="btn_sure">确定</a>
+            <a class="btn_cancel">取消</a>
+        </div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/dialog/useraddpop.js"></script>
+</body>
+</html>

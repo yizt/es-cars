@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETL管理工具-任务调度</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link href="../../codebase/dhtmlxgrid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/component.css" />
+</head>
+<body>
+    <h3 class="m-crumb">当前位置：任务调度 <i></i> 任务调度</h3>
+    <div class="product_box">
+        <form>
+            <div class="steel_date">
+                <span class="steel_text">任务名称：</span>
+                <input class="form_input" id="taskName" type="text" />
+                <span class="m-button m-button-submit" id="btn_search">查 询</span>
+                <button type="reset" class="m-button m-button-query">重置</button>
+            </div>
+        </form>
+
+        <div class="steel_date" style="padding-bottom:10px;">
+            <span class="m-button m-button-add  btn_add" style="margin-left:0px;">添加调度</span>
+        </div>
+        <div id="gridbox" style="width:100%;"></div>
+    </div>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../codebase/dhtmlx.js"></script>
+    <script src="../../js/config.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/inner/control.js"></script>
+</body>
+</html>
